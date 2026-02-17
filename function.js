@@ -20,4 +20,49 @@
     
    }
    console.log(4 + 4);
+
+   //Function with parameter 
+   function greetUser(name){
+    return("hello" + name);
+   }
+   greetUser("Yvette");
+   greetUser("Alex");
+   console.log(greetUser("yvette"));
+   console.log(greetUser("Alex"));
+
+
+   //function with multiple parameter 
+   function addNumber(a,b){
+    return(a + b);
+   }
+   console.log(addNumber(5,3));
+
+   // return statement (very important concept )
+
+   function add(a,b){
+    return(a+b);
+
+   }
+   let result = add(2,5);
+   console.log(result);
    //
+// function expression 
+
+function greet(){
+    return("welcome Aline")
+};
+console.log(greet());
+
+
+// arrow function  Mordern java script 
+
+const greet = () => {
+    console.log("Hiii Aline")
+};
+
+// with parameter 
+const greet = (a,b)=> {
+    console.log()
+}
+
+
