@@ -1,0 +1,101 @@
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Menu Toggle Example</title>
+
+  <!-- Tailwind CDN -->
+  <script src="https://cdn.tailwindcss.com"></script>
+</head>
+
+<body class="bg-gray-100">
+
+  <!-- Navbar -->
+  <nav class="bg-blue-600 p-4 text-white flex justify-between items-center">
+
+    <h1 class="text-xl font-bold">My App</h1>
+
+    <!-- Hamburger Icon -->
+    <button id="menuBtn" class="text-3xl md:hidden">
+      ☰
+    </button>
+    <ul class="hidden md:flex space-x-6">
+      <li class="cursor-pointer hover:text-gray-200">Home</li>
+      <li class="cursor-pointer hover:text-gray-200">About</li>
+      <li class="cursor-pointer hover:text-gray-200">Services</li>
+      <li class="cursor-pointer hover:text-gray-200">Contact</li>
+    </ul>
+  </nav>
+
+  
+  <div id="mobileMenu" class="hidden bg-white shadow-md md:hidden">
+    <ul class="flex flex-col p-4 space-y-3">
+      <li class="cursor-pointer hover:text-blue-600">Home</li>
+      <li class="cursor-pointer hover:text-blue-600">About</li>
+      <li class="cursor-pointer hover:text-blue-600">Services</li>
+      <li class="cursor-pointer hover:text-blue-600">Contact</li>
+    </ul>
+  </div>
+
+  <!-- JavaScript -->
+  <script>
+    //  Select elements
+    const menuBtn = document.getElementById("menuBtn");
+    const mobileMenu = document.getElementById("mobileMenu");
+
+    //  Add event listener
+    menuBtn.addEventListener("click", function () {
+
+      // Toggle Tailwind's "hidden" class
+      mobileMenu.classList.toggle("hidden");
+
+    });
+  </script>
+
+</body>
+</html>
+
+
+
+<!-- <!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+     <script src="https://cdn.tailwindcss.com"></script>
+</head>
+<body class="bg-gray-100">
+    <nav class="bg-blue-800 text-white flex justfy-between items-center">
+
+        <h1 class="text-xl font-bold ">My App</h1>
+        <button id="menuBtn" class="text-3xl md:hidden">☰</button>
+        <ul class="hiddeen md:flex spaace space-x-6">
+            <li class="cursor-pointer hover:text-gray-200" >Home</li>
+            <li class="cursor-pointer hover:text-gray-200">Abut</li>
+            <li class="cursor-pointer hover:text-gray-200">Service</li>
+            <li class="cursor-pointer hover:text-gray-200">Contact</li>
+        </ul>
+    </nav>
+    <div class="hidden bg-white shadow-md md:hidden" id="mobileMenu">
+        <ul class="flex flex-cols p-4 space-y-3">
+            <li class="cursor-pointer hover:text-blue-600">Home</li>
+            <li class="cursor-pointer hover:text-blue-600">About</li>
+            <li class="cursor-pointer hover:text-blue-600">Service</li>
+            <li class="cursor-pointer hover:text-blue-600">Contact</li>
+        </ul>
+    </div>
+    <script>
+        const menuBtn = document.getElemetById("menuBtn");
+        const mobileMenu = document.getElementById("mobileBtn")
+        // Add event listener 
+        menuBtn.AddEventListener("click",function(){
+            //toggle tailwind's hidden class
+            mobile.mobileMenu.classList.toggle("hidden");
+        });
+    </script>
+    
+</body>
+</html> -->

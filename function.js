@@ -61,8 +61,8 @@ const greet = () => {
 };
 
 // with parameter 
-const greet = (a,b)=> {
-    console.log()
-}
+const greet = (a,b)=> a + b {
+    console.log(greet());
+};
 
 

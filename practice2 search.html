@@ -1,0 +1,69 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>Simple Search Practice</title>
+  <script src="https://cdn.tailwindcss.com"></script>
+</head>
+
+<body class="bg-gray-100 p-10">
+
+  <h1 class="text-2xl font-bold mb-4">Search Features</h1>
+
+  <!-- Search Input -->
+  <div class="flex gap-2 mb-6">
+    <input 
+      type="text" 
+      id="searchInput"
+      placeholder="Search something..."
+      class="border p-2 rounded w-64"
+    />
+
+    <button 
+      id="searchBtn"
+      class="bg-blue-600 text-white px-4 py-2 rounded hover:bg-blue-700"
+    >
+      Search
+    </button>
+  </div>
+
+  <!-- List -->
+  <ul id="itemList" class="space-y-2">
+    <li class="item bg-white p-2 rounded shadow">Mobile Friendly</li>
+    <li class="item bg-white p-2 rounded shadow">Fast Loading</li>
+    <li class="item bg-white p-2 rounded shadow">Flexible Layout</li>
+    <li class="item bg-white p-2 rounded shadow">Adaptive Images</li>
+    <li class="item bg-white p-2 rounded shadow">Dark Mode Support</li>
+  </ul>
+
+  <script>
+    // Select elements
+    const searchInput = document.getElementById("searchInput");
+    const searchBtn = document.getElementById("searchBtn");
+    const items = document.querySelectorAll(".item");
+
+    // Add event listener
+    searchBtn.addEventListener("click", function () {
+
+      // Get user input
+      const searchValue = searchInput.value.toLowerCase();
+
+      // Loop through items
+      items.forEach(function (item) {
+
+        const text = item.innerText.toLowerCase();
+
+        // Compare text with input
+        if (text.includes(searchValue)) {
+          item.style.display = "block";
+        } else {
+          item.style.display = "none";
+        }
+
+      });
+
+    });
+  </script>
+
+</body>
+</html>
